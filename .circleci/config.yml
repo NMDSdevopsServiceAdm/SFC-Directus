@@ -46,8 +46,7 @@ commands:
             cf set-env "<<parameters.appname>>-dark" AWS_SECRET_ACCESS_KEY "${<<parameters.env_prefix>>_AWS_SECRET_ACCESS_KEY}"
             cf set-env "<<parameters.appname>>-dark" NODE_ENV "${<<parameters.env_prefix>>_NODE_ENV}"
 
-            cf set-env "<<parameters.appname>>-dark" PORT "${<<parameters.env_prefix>>_PORT}"
-            cf set-env "<<parameters.appname>>-dark" PUBLIC_URL "${<<parameters.env_prefix>>_PUBLIC_URL}"
+            cf set-env "<<parameters.appname>>-dark" CONFIG_PATH "${<<parameters.env_prefix>>_CONFIG_PATH}"
 
             cf set-env "<<parameters.appname>>-dark" DB_CLIENT "${<<parameters.env_prefix>>_DB_CLIENT}"
             cf set-env "<<parameters.appname>>-dark" DB_CONNECTION_STRING "${<<parameters.env_prefix>>_DB_CONNECTION_STRING}"
