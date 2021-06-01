@@ -1,9 +1,11 @@
 applications:
   - name: sfccms
-    memory: 4G
+    memory: 1G
     disk_quota: 2GB
+    instances: 3
     buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.7.52
     services:
       - sfccms-db
       - sfccms-s3
+      - sfccms-redis
 stack: cflinuxfs3
