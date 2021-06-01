@@ -6,4 +6,5 @@ applications:
     services:
       - sfccmstest-db
       - sfccmstest-s3
+      - sfccmstest-redis
 stack: cflinuxfs3
