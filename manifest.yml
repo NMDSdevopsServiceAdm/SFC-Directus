@@ -8,4 +8,6 @@ applications:
       - sfccms-db
       - sfccms-s3
       - sfccms-redis
+    env:
+      CORS_ORIGIN: "sfcpreprod.cloudapps.digital,sfcprod.cloudapps.digital,asc-wds.skillsforcare.org.uk"
 stack: cflinuxfs3

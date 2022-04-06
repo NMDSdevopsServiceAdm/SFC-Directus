@@ -7,4 +7,6 @@ applications:
       - sfccmstest-db
       - sfccmstest-s3
       - sfccmstest-redis
+    env:
+      CORS_ORIGIN: "sfcstaging.cloudapps.digital,sfcbenchmarks.cloudapps.digital"
 stack: cflinuxfs3
