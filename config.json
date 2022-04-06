@@ -1,4 +1,6 @@
 {
-    "PORT": 8080,
-    "PUBLIC_URL": "/"
+  "PORT": 8080,
+  "PUBLIC_URL": "/",
+  "CORS_ENABLED": "true",
+  "CORS_METHODS": "GET"
 }
