@@ -8,7 +8,7 @@ applications:
       - sfccmstest-s3
       - sfccmstest-redis
     env:
-      CORS_ORIGIN: "sfcstaging.cloudapps.digital,sfcbenchmarks.cloudapps.digital"
+      CORS_ORIGIN: "true"
       CORS_ENABLED: "true"
       CORS_METHODS: "GET"
 stack: cflinuxfs3
