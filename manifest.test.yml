@@ -2,7 +2,7 @@ applications:
   - name: sfccmstest
     memory: 1G
     disk_quota: 2GB
-    buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.7.52
+    buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
     services:
       - sfccmstest-db
       - sfccmstest-s3
