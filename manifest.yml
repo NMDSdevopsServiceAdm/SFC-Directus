@@ -9,7 +9,7 @@ applications:
       - sfccms-s3
       - sfccms-redis
     env:
-      CORS_ORIGIN: "sfcpreprod.cloudapps.digital,sfcprod.cloudapps.digital,asc-wds.skillsforcare.org.uk"
+      CORS_ORIGIN: "true"
       CORS_ENABLED: "true"
       CORS_METHODS: "GET"
 stack: cflinuxfs3
