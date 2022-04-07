@@ -6,8 +6,8 @@
     "start": "directus database migrate:latest && directus start"
   },
   "engines": {
-    "node": "14.17.0",
-    "npm": "7.14.0"
+    "node": "16",
+    "npm": "8"
   },
   "keywords": [],
   "author": "",
