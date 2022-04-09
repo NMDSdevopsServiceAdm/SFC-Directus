@@ -282,6 +282,6 @@ workflows:
           package: "."
           dark_subdomain: sfccms-dark
           dark_domain: cloudapps.digital
-          live_subdomain: sfccms
-          live_domain: cloudapps.digital
+          live_subdomain: asc-wds-cms
+          live_domain: skillsforcare.org.uk
           workspace_path: .
