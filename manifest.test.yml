@@ -6,7 +6,7 @@ applications:
     services:
       - sfccmstest-db
       - sfccmstest-s3
-      - sfccmstest-redis
+      - sfccmstest-redis-new
     env:
       CORS_ORIGIN: "true"
       CORS_ENABLED: "true"
