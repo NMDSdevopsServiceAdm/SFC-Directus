@@ -3,10 +3,8 @@ applications:
     memory: 1G
     disk_quota: 2GB
     buildpacks:
-      - nodejs-buildpack
-      - nginx_buildpack
-    # buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
-    # buildpack: https://github.com/cloudfoundry-community/nginx-buildpack.git
+      - https://github.com/cloudfoundry/nodejs-buildpack.git
+      - https://github.com/cloudfoundry-community/nginx-buildpack.git
     services:
       - sfccmstest-db
       - sfccmstest-s3
