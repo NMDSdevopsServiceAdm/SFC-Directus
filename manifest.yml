@@ -1,6 +1,4 @@
 applications:
-  - name: nginx
-    version: stable
   - name: sfccms
     memory: 1G
     disk_quota: 2GB
