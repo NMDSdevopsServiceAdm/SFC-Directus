@@ -36,7 +36,7 @@ commands:
     steps:
       - run:
           command: |
-            cf push --no-start "<<parameters.appname>>-dark" -b https://github.com/cloudfoundry-community/nginx-buildpack.git -b https://github.com/cloudfoundry/nodejs-buildpack.git -f "<<parameters.manifest>>"<<# parameters.vars>> --vars-file "<<parameters.vars>>"<</ parameters.vars>> -p "<<parameters.package>>"<<# parameters.dark_subdomain>> -n "<<parameters.dark_subdomain>>"<</ parameters.dark_subdomain>> -d "<<parameters.dark_domain>>"
+            cf push --no-start "<<parameters.appname>>-dark" -f "<<parameters.manifest>>"<<# parameters.vars>> --vars-file "<<parameters.vars>>"<</ parameters.vars>> -p "<<parameters.package>>"<<# parameters.dark_subdomain>> -n "<<parameters.dark_subdomain>>"<</ parameters.dark_subdomain>> -d "<<parameters.dark_domain>>"
             cf set-env "<<parameters.appname>>-dark" CIRCLE_BUILD_NUM "${CIRCLE_BUILD_NUM}"
             cf set-env "<<parameters.appname>>-dark" CIRCLE_SHA1 "${CIRCLE_SHA1}"
             cf set-env "<<parameters.appname>>-dark" CIRCLE_WORKFLOW_ID "${CIRCLE_WORKFLOW_ID}"
@@ -45,26 +45,19 @@ commands:
             cf set-env "<<parameters.appname>>-dark" AWS_ACCESS_KEY_ID "${<<parameters.env_prefix>>_AWS_ACCESS_KEY_ID}"
             cf set-env "<<parameters.appname>>-dark" AWS_SECRET_ACCESS_KEY "${<<parameters.env_prefix>>_AWS_SECRET_ACCESS_KEY}"
             cf set-env "<<parameters.appname>>-dark" NODE_ENV "${<<parameters.env_prefix>>_NODE_ENV}"
-
             cf set-env "<<parameters.appname>>-dark" CONFIG_PATH "${<<parameters.env_prefix>>_CONFIG_PATH}"
-
             cf set-env "<<parameters.appname>>-dark" DB_CLIENT "${<<parameters.env_prefix>>_DB_CLIENT}"
             cf set-env "<<parameters.appname>>-dark" DB_CONNECTION_STRING "${<<parameters.env_prefix>>_DB_CONNECTION_STRING}"
-
             cf set-env "<<parameters.appname>>-dark" KEY "${<<parameters.env_prefix>>_KEY}"
             cf set-env "<<parameters.appname>>-dark" SECRET "${<<parameters.env_prefix>>_SECRET}"
-
             cf set-env "<<parameters.appname>>-dark" RATE_LIMITER_ENABLED "${<<parameters.env_prefix>>_RATE_LIMITER_ENABLED}"
             cf set-env "<<parameters.appname>>-dark" RATE_LIMITER_STORE "${<<parameters.env_prefix>>_RATE_LIMITER_STORE}"
             cf set-env "<<parameters.appname>>-dark" RATE_LIMITER_REDIS "${<<parameters.env_prefix>>_RATE_LIMITER_REDIS}"
-
             cf set-env "<<parameters.appname>>-dark" CACHE_ENABLED "${<<parameters.env_prefix>>_CACHE_ENABLED}"
             cf set-env "<<parameters.appname>>-dark" CACHE_AUTO_PURGE "${<<parameters.env_prefix>>_CACHE_AUTO_PURGE}"
             cf set-env "<<parameters.appname>>-dark" CACHE_STORE "${<<parameters.env_prefix>>_CACHE_STORE}"
             cf set-env "<<parameters.appname>>-dark" CACHE_REDIS "${<<parameters.env_prefix>>_CACHE_REDIS}"
-
             cf set-env "<<parameters.appname>>-dark" SESSION_STORE "${<<parameters.env_prefix>>_SESSION_STORE}"
-
             cf set-env "<<parameters.appname>>-dark" STORAGE_LOCATIONS "${<<parameters.env_prefix>>_STORAGE_LOCATIONS}"
             cf set-env "<<parameters.appname>>-dark" STORAGE_AMAZON_DRIVER "${<<parameters.env_prefix>>_STORAGE_AMAZON_DRIVER}"
             cf set-env "<<parameters.appname>>-dark" STORAGE_AMAZON_KEY "${<<parameters.env_prefix>>_STORAGE_AMAZON_KEY}"
@@ -73,7 +66,6 @@ commands:
             cf set-env "<<parameters.appname>>-dark" STORAGE_AMAZON_REGION "${<<parameters.env_prefix>>_STORAGE_AMAZON_REGION}"
             cf set-env "<<parameters.appname>>-dark" CONTENT_SECURITY_POLICY "${<<parameters.env_prefix>>_CONTENT_SECURITY_POLICY}"
             cf set-env "<<parameters.appname>>-dark" CONTENT_SECURITY_POLICY_ "${<<parameters.env_prefix>>_CONTENT_SECURITY_POLICY_}"
-
             # Push as "dark" instance (URL in manifest)
             cf start "<<parameters.appname>>-dark"
             # Ensure dark route is exclusive to dark app
