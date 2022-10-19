@@ -64,15 +64,8 @@ commands:
             cf set-env "<<parameters.appname>>-dark" STORAGE_AMAZON_SECRET "${<<parameters.env_prefix>>_STORAGE_AMAZON_SECRET}"
             cf set-env "<<parameters.appname>>-dark" STORAGE_AMAZON_BUCKET "${<<parameters.env_prefix>>_STORAGE_AMAZON_BUCKET}"
             cf set-env "<<parameters.appname>>-dark" STORAGE_AMAZON_REGION "${<<parameters.env_prefix>>_STORAGE_AMAZON_REGION}"
-            cf set-env "<<parameters.appname>>-dark" CONTENT_SECURITY_POLICY "${<<parameters.env_prefix>>_CONTENT_SECURITY_POLICY}"
-            cf set-env "<<parameters.appname>>-dark" CONTENT_SECURITY_POLICY_ "${<<parameters.env_prefix>>_CONTENT_SECURITY_POLICY_}"
-            cf set-env "<<parameters.appname>>-dark" ASSETS_CONTENT_SECURITY_POLICY_USE_DEFAULT "${<<parameters.env_prefix>>_ASSETS_CONTENT_SECURITY_POLICY_USE_DEFAULT}"
-            cf set-env "<<parameters.appname>>-dark" ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__UPGRADE_INSECURE_REQUESTS "${<<parameters.env_prefix>>_ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__UPGRADE_INSECURE_REQUESTS}"
-            cf set-env "<<parameters.appname>>-dark" ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__SCRIPT_SRC "${<<parameters.env_prefix>>_ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__SCRIPT_SRC}"
-            cf set-env "<<parameters.appname>>-dark" ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__OBJECT_SRC "${<<parameters.env_prefix>>_ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__OBJECT_SRC}"
             cf set-env "<<parameters.appname>>-dark" ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__DEFAULT_SRC "${<<parameters.env_prefix>>_ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__DEFAULT_SRC}"
-
-
+            cf set-env "<<parameters.appname>>-dark" ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__STYLE_SRC "${<<parameters.env_prefix>>_ASSETS_CONTENT_SECURITY_POLICY_DIRECTIVES__STYLE_SRC}"
             # Push as "dark" instance (URL in manifest)
             cf start "<<parameters.appname>>-dark"
             # Ensure dark route is exclusive to dark app
